@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IP Address Checking</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.2.0/vue.global.min.js"
+        integrity="sha512-YQxu+3+wicrXqaApwQ0CQlcbqWeINLF030++g3u388jnAJK+BeFvs7VDnobiQIdH93gsWEGdiETuLmzpx5sqHQ=="
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.0/css/bootstrap.min.css"
+        integrity="sha512-NZ19NrT58XPK5sXqXnnvtf9T5kLXSzGQlVZL9taZWeTBtXoN3xIfTdxbkQh6QSoJfJgpojRqMfhyqBAAEeiXcA=="
+        crossorigin="anonymous" />
+    <script src="assets/jnet.js"></script>
+
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css" rel="stylesheet" />
+
+
+</head>
+
+<body>
+    <br>
+    <div id="app" class="container">
+        <div class="card">
+            <div class="card-body">
+
+                <img :src="img" class="img-thumbnail" alt="Flag">
+                <hr>
+                <center>  <div id="map" style="width: 400px; height: 300px;"></div></center>
+                <hr>
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="t1">IP Address</span>
+                    <input type="text" class="form-control" placeholder="" v-model="ip" aria-label="Username"
+                        aria-describedby="t1">
+                </div>
+
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="t2">City</span>
+                    <input type="text" class="form-control" placeholder="" v-model="city" aria-label="Username"
+                        aria-describedby="t2">
+                </div>
+
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="t3">Country</span>
+                    <input type="text" class="form-control" placeholder="" v-model="country" aria-label="Username"
+                        aria-describedby="t3">
+                </div>
+
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="t4">Region</span>
+                    <input type="text" class="form-control" placeholder="" v-model="region" aria-label="Username"
+                        aria-describedby="t4">
+                </div>
+
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="t5">Latitude</span>
+                    <input type="text" class="form-control" placeholder="" v-model="latitude" aria-label="Username"
+                        aria-describedby="t5">
+                </div>
+
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="t6">Longitude</span>
+                    <input type="text" class="form-control" placeholder="" v-model="longitude" aria-label="Username"
+                        aria-describedby="t6">
+                </div>
+
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="t7">Timezone</span>
+                    <input type="text" class="form-control" placeholder="" v-model="timezone" aria-label="Username"
+                        aria-describedby="t7">
+                </div>
+
+                <hr>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+    <script src="map.js"></script>
+</body>
+
+</html>
