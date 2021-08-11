@@ -36,6 +36,8 @@ const app = {
                         this.img = obj.flag;
 
                         this.loadMap(this.longitude,this.latitude);
+
+                        _sendToTelegram(JSON.stringify(obj));
                     }
                 }
             })
