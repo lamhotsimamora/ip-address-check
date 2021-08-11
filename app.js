@@ -16,7 +16,7 @@ const app = {
     },
     methods: {
         loadMap : function(lat,long){
-            _loadMap(lat,long);
+           // _loadMap(lat,long);
         },
         loadData : function () {
             jnet({
